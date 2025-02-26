@@ -1,0 +1,7 @@
+version: 4.2.12
+session: 67bf6276f9cc135c0cf683dd
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
