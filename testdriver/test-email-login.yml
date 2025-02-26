@@ -1,0 +1,33 @@
+version: 4.2.12
+session: 67bf628565b243a17bd248a9
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Enter a valid email address in the "Email address" field.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email input field label
+        action: click
+      - command: type
+        text: test@example.com
+  - prompt: Enter a valid email address in the "Email address" field.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email input field label
+        action: click
+      - command: type
+        text: test@example.com
+  - prompt: Click the "Continue" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the email input field
+        action: click
+  - prompt: Assert that the password input field appears.
+    commands:
+      - command: assert
+        expect: the password input field is visible
