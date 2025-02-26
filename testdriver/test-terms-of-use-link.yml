@@ -1,0 +1,33 @@
+version: 4.2.12
+session: 67bf627f65b243a17bd248a5
+steps:
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Click the "Terms of Use" link.
+    commands:
+      - command: hover-text
+        text: Terms of Use
+        description: link at the bottom of the page
+        action: click
+  - prompt: >-
+      Assert that the Terms of Use page is displayed.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the "Terms of Use" page is displayed
